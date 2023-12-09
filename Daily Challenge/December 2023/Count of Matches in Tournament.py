@@ -6,10 +6,10 @@
 
 class Solution:
     def numberOfMatches(self, n: int, matches=0) -> int:
-        if n==1:
+        if n == 1:
             return matches
-        elif n%2==0:
-            matches = self.numberOfMatches(n/2, matches+n/2)
+        elif n % 2 == 0:
+            matches = self.numberOfMatches(n / 2, matches + n / 2)
         else:
-            matches = self.numberOfMatches((n-1)/2+1, matches+(n-1)/2)
+            matches = self.numberOfMatches((n - 1) / 2 + 1, matches + (n - 1) / 2)
         return int(matches)
